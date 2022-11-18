@@ -13,6 +13,3 @@ It is extremely simple about DDD with examples.
         - [`progress`] [ToDo App](./examples/php/symfony/to-do)
         - [waiting...] [The Digital Library](./examples/php/symfony/digital-library)
     - [waiting...] Laravel
-- TS
-    - [waiting...] Vue 3
-    - [waiting...] React

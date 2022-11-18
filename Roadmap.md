@@ -9,7 +9,4 @@
 - Add examples on:
     - PHP
         - Laravel
-    - Typescript
-        - Vue 3
-        - React
 - Add `CQRS` app-examples
