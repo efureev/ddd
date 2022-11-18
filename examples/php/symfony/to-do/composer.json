@@ -1,0 +1,96 @@
+{
+  "name": "efureev/ddd-php-symfony-todo-app",
+  "description": "The ToDo Symfony App",
+  "type": "project",
+  "keywords": [
+    "ddd",
+    "symfony",
+    "todo"
+  ],
+  "require": {
+    "php": ">=8.1",
+    "ext-redis": "*",
+    "symfony/console": "6.1.*",
+    "symfony/dotenv": "6.1.*",
+    "symfony/flex": "^2.0",
+    "symfony/framework-bundle": "6.1.*",
+    "symfony/runtime": "6.1.*",
+    "symfony/yaml": "6.1.*"
+  },
+  "require-dev": {
+    "codeception/codeception": "^5.0",
+    "codeception/module-asserts": "^3.0",
+    "codeception/module-symfony": "^3.1",
+    "ergebnis/composer-normalize": "^2.28",
+    "roave/security-advisories": "dev-latest",
+    "squizlabs/php_codesniffer": "^3.7.1"
+  },
+  "replace": {
+    "symfony/polyfill-ctype": "*",
+    "symfony/polyfill-iconv": "*",
+    "symfony/polyfill-php72": "*",
+    "symfony/polyfill-php73": "*",
+    "symfony/polyfill-php74": "*",
+    "symfony/polyfill-php80": "*",
+    "symfony/polyfill-php81": "*"
+  },
+  "conflict": {
+    "symfony/symfony": "*"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "App\\Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/package-versions-deprecated": true,
+      "symfony/runtime": true,
+      "ergebnis/composer-normalize": true,
+      "symfony/flex": true
+    },
+    "optimize-autoloader": true,
+    "preferred-install": {
+      "*": "dist"
+    },
+    "sort-packages": true
+  },
+  "extra": {
+    "composer-normalize": {
+      "indent-size": 2,
+      "indent-style": "space"
+    },
+    "symfony": {
+      "allow-contrib": false,
+      "require": "6.1.*"
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "@auto-scripts"
+    ],
+    "post-update-cmd": [
+      "@auto-scripts"
+    ],
+    "auto-scripts": {
+      "cache:clear": "symfony-cmd",
+      "assets:install %PUBLIC_DIR%": "symfony-cmd"
+    },
+    "cs-fix": "@php ./vendor/bin/phpcbf",
+    "functional-test": "php vendor/bin/codecept run functional",
+    "phpcs": "@php ./vendor/bin/phpcs",
+    "tests": [
+      "@phpcs",
+      "@unit-test",
+      "@functional-test"
+    ],
+    "unit-test": "php vendor/bin/codecept run unit"
+  }
+}
