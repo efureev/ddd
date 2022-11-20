@@ -35,4 +35,5 @@ services:
       - '%kernel.project_dir%/etc/databases/elasticsearch'
       - '%env(APP_ENV)%'
     public: true
-  App\ToDo\Domain\ToDoRepository: '@App\ToDo\Infrastructure\Repository\ElasticsearchToDoRepository'
+  #  App\ToDo\Domain\ToDoRepository: '@App\ToDo\Infrastructure\Repository\ElasticsearchToDoRepository'
+  App\ToDo\Domain\ToDoRepository: '@App\ToDo\Infrastructure\Repository\DummyToDoRepository'
