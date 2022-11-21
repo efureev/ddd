@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Controller\ToDo;
 
-use App\Shared\Domain\Utils;
 use App\ToDo\Application\SearchAll\ToDoAllSearcher;
 use App\ToDo\Application\ToDoResponse;
 use Symfony\Component\HttpFoundation\JsonResponse;
