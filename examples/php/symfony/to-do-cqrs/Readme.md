@@ -2,12 +2,14 @@
 
 ## Description
 
-A simple app is built with DDD + CQRS.  
-Without Auth.  
-Only REST JSON API.
-Еру `UI Layer` is placed in a separate folder - `app`.
-Has Request Middleware
-Has `EBS`
+- A simple app is built with DDD.
+- Only REST JSON API.
+- Implemented `CQRS`
+- Implemented `EBS`
+- Without Auth.
+- `UI Layer` is placed in a separate folder - `app`.
+- Has Request Middleware
+- Add `Specifications` - `Criteria` to search `Entity`
 
 ## Functionality
 
